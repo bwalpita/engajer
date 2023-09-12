@@ -4,8 +4,8 @@ import requests
 
 app = FastAPI()
 
-# Your existing code
-headers = {"Authorization": f"Bearer {'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'}"}
+# we just try the api for running on local lap but actual model and codes in notebook file
+headers = {"Authorization": f"Bearer {'api key'}"}
 API_URL = "https://api-inference.huggingface.co/models/deepset/roberta-base-squad2"
 
 def query(payload):
