@@ -54,5 +54,4 @@ Special thanks to [Hugging Face](https://huggingface.co/) for providing the host
 
 Please make sure to replace `'api key'` in the instructions with appropriate formatting indicating where the actual API key should be placed. If you have any specific questions or further requests, feel free to let me know!
 
-using-custom-knowledge-base-with-langchain)
-- [Deploy Your Private Llama 2 Model to Production with RunPod](https://www.mlexpert.io/prompt-engineering/deploy-llama-2-on-runpod)
+our own model in colab notbook (engajer new version.ipynb)
