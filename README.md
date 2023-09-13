@@ -1,44 +1,58 @@
-# Get SH\*T Done with Prompt Engineering and LangChain
+instructions for setting up and running a Python FastAPI project with a recommendation API using a pre-trained ReBERTa base model from Hugging Face. I'll help you refine the provided instructions and create a standard README.md file. 
 
-Build real-world AI apps with ChatGPT/GPT-4 and LangChain in Python
+---
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/curiousily/Get-Things-Done-with-Prompt-Engineering-and-LangChain/)
-[![](https://dcbadge.vercel.app/api/server/UaNPxVD6tv?style=flat)](https://discord.gg/UaNPxVD6tv)
-[![](https://img.shields.io/youtube/channel/subscribers/UCoW_WzQNJVAjxo4osNAxd_g?label=Watch%20on%20YouTube)](https://bit.ly/venelin-subscribe)
-[![](https://img.shields.io/github/license/curiousily/Get-Things-Done-with-Prompt-Engineering-and-LangChain)](https://github.com/curiousily/Get-Things-Done-with-Prompt-Engineering-and-LangChain/blob/master/LICENSE)
+# Recommendation API with FastAPI and ReBERTa
 
-## 🍿 Watch on YouTube
+## Introduction ( Running Api locally without GPU for testing)
 
-- [Fine-tuning Llama 2 on Your Own Dataset](https://www.youtube.com/watch?v=MDA3LUKNl1E)
-- [Deploy LLM to Production on Single GPU](https://www.youtube.com/watch?v=HI3cYN0c9ZU)
-- [Chat with Multiple PDFs using Llama 2 and LangChain](https://www.youtube.com/watch?v=QshWJ77Sktc)
+This project demonstrates a recommendation API developed with Python FastAPI, utilizing the ReBERTa base model. To run this API locally without requiring significant hardware resources, we leverage Hugging Face's hosted API for the ReBERTa model.
 
-## 📖 Read the Tutorials
+## Installation
 
-### LangChain
+Install the required libraries by running the following commands:
 
-- [LangChain Quickstart](https://www.mlexpert.io/prompt-engineering/langchain-quickstart)
-- [Load Custom Data with Loaders](https://www.mlexpert.io/prompt-engineering/loaders)
-- [Add AI with Models](https://www.mlexpert.io/prompt-engineering/models)
-- [Make LLMs Useful with Chains](https://www.mlexpert.io/prompt-engineering/chains)
-- [Build Chatbots with Memory](https://www.mlexpert.io/prompt-engineering/memory)
-- [Complex Tasks with Agents](https://www.mlexpert.io/prompt-engineering/agents)
+```bash
+pip install fastapi uvicorn requests
+```
 
-### Models
+## Getting Started
 
-- [StableVicuna - Open Source RLHF LLM Chatbot](https://www.mlexpert.io/prompt-engineering/stable-vicuna)
-- [OpenLLaMa - An Open Reproduction of LLaMA](https://www.mlexpert.io/prompt-engineering/open-llama)
-- [XGen-7B: Long Sequence Modeling with (up to) 8K Tokens](https://www.youtube.com/watch?v=6YMOCaXGUDA)
-- [Falcon 180B](https://www.mlexpert.io/prompt-engineering/falcon-180b)
+1. Go to [Hugging Face](https://huggingface.co/) and create an account to obtain an API key (it's free).
 
-### Projects
+2. Open the `video_recomend_api_QA_R_model.py` file and replace `'api key'` in the following line with your obtained API key:
 
-- [Fine-tuning Llama 2 on a Custom Dataset](https://www.mlexpert.io/prompt-engineering/fine-tuning-llama-2-on-custom-dataset)
-- [Chat with Multiple PDFs using Llama 2 and LangChain](https://www.mlexpert.io/prompt-engineering/chat-with-multiple-pdfs-using-llama-2-and-langchain)
-- [Chatbot with Local LLM (Falcon 7B) and LangChain](https://www.mlexpert.io/prompt-engineering/chatbot-with-local-llm-using-langchain)
-- [Private GPT4All: Chat with PDF Files Using Free LLM](https://www.mlexpert.io/prompt-engineering/private-gpt4all)
-- [CryptoGPT: Crypto Twitter Sentiment Analysis](https://www.mlexpert.io/prompt-engineering/cryptogpt)
-- [Fine-tuning LLM (Falcon 7b) on a Custom Dataset with QLoRA](https://www.mlexpert.io/prompt-engineering/fine-tuning-llm-on-custom-dataset-with-qlora)
-- [Deploy LLM to Production with HuggingFace Inference Endpoints](https://www.mlexpert.io/prompt-engineering/deploy-llm-to-production)
-- [Support Chatbot using Custom Knowledge Base with LangChain and Open LLM](https://www.mlexpert.io/prompt-engineering/support-chatbot-using-custom-knowledge-base-with-langchain)
+    ```python
+    headers = {"Authorization": f"Bearer {'api key'}"}
+    ```
+
+3. Save the file.
+
+4. Open a command prompt or terminal and navigate to the folder containing `video_recomend_api_QA_R_model.py`.
+
+5. Start the FastAPI server with the following command:
+
+    ```bash
+    uvicorn video_recomend_api_QA_R_model:app --reload
+    ```
+
+6. This will start the server and display a URL (e.g., `http://127.0.0.1:8000`). Copy this URL.
+
+7. Open a web browser and paste the copied URL. Change the URL to `http://127.0.0.1:8000/docs`. This will open the Swagger API documentation page.
+
+8. You can now enter a question and the API will provide a related video link.
+
+## Notes
+
+- The ReBERTa base model is not implemented in this script locally due to high resource requirements. Instead, it is accessed via Hugging Face's hosted API.
+
+## Acknowledgments
+
+Special thanks to [Hugging Face](https://huggingface.co/) for providing the hosted API for the ReBERTa model.
+
+---
+
+Please make sure to replace `'api key'` in the instructions with appropriate formatting indicating where the actual API key should be placed. If you have any specific questions or further requests, feel free to let me know!
+
+using-custom-knowledge-base-with-langchain)
 - [Deploy Your Private Llama 2 Model to Production with RunPod](https://www.mlexpert.io/prompt-engineering/deploy-llama-2-on-runpod)
